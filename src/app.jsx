@@ -1,10 +1,14 @@
-import logo from './logo.svg';
-import './app.css';
+import "./app.css";
+import Content from "./component/content";
+import Navbar from "./component/navbar";
 
-function App() {
+const App = (props) => {
   return (
-    <h1>test</h1>
+    <>
+      <Navbar></Navbar>
+      <Content></Content>
+    </>
   );
-}
+};
 
 export default App;
