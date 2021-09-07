@@ -3,18 +3,12 @@ import Item from "./item";
 
 class List extends Component {
   render() {
+    const items = this.props.items;
     return (
       <div className="list">
-        <Item>test</Item>
-        <Item>test</Item>
-        <Item>test</Item>
-        <Item>test</Item>
-        <Item>test</Item>
-        <Item>test</Item>
-        <Item>test</Item>
-        <Item>test</Item>
-        <Item>test</Item>
-        <Item>test</Item>
+        {items.map((item) => (
+          <Item item={item} />
+        ))}
       </div>
     );
   }

@@ -22,7 +22,7 @@ class Navbar extends Component {
         >
           <input ref={this.inputRef} className="search-input" type="search" />
           <button className="search-button" type="submit">
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </button>
         </form>
       </div>

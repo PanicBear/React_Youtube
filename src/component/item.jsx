@@ -2,13 +2,17 @@ import React, { Component } from "react";
 
 class Item extends Component {
   render() {
+    const snippet = this.props.item.snippet;
+    const title = snippet.title;
+    const thumbnailUrl=snippet.thumbnails.default.url;
+    const channelTitle = snippet.channelTitle;
     return (
       <div className="item">
-        <img className="thumb" src="https://picsum.photos/156/88" alt="" />
+        <img className="thumb" src={thumbnailUrl} alt="" />
         <div className="vid-info">
-          <span className="name">name</span>
+          <span className="name">{title}</span>
           <br />
-          <strong className="channel">channel</strong>
+          <strong className="channel">{channelTitle}</strong>
         </div>
       </div>
     );

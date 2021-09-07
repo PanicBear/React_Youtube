@@ -67,13 +67,13 @@ button {
 }
 
 /* Content */
-.content {
-  /* background-color: var(--background-color); */
-}
+/* .content {
+  background-color: var(--background-color);
+} */
 .list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   height: fit-content;
 }
@@ -89,7 +89,7 @@ button {
 }
 
 .item .thumb {
-  max-width: 172px;
+  max-width: 8em;
   max-height: 6em;
 }
 .item .vid-info {

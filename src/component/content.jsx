@@ -3,8 +3,9 @@ import List from "./list";
 
 class Content extends Component {
   render() {
+    const items = this.props.items;
     return <div className="content">
-      <List></List>
+      <List items={items}></List>
     </div>;
   }
 }
