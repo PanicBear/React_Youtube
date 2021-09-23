@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Navbar from "./component/navbar";
 import Content from "./component/content";
-import "./app.css";
+import "./css/app.css";
 class App extends Component {
   key1 = "AIzaSyAAGc5-7w931KT4BPwH9Mv8X9ctk0f1TVc";
   key2 = "AIzaSyBVf5GoN4nFYuoumZXHR6ZeUZvyYOMWgsI";
   state = {
     searchParam: undefined,
-    watching:undefined,
+    watching: undefined,
     items: undefined,
   };
   baseURL = "https://youtube.googleapis.com/youtube/v3";
@@ -34,9 +34,9 @@ class App extends Component {
     const items = result.items;
     this.setState({ ...this.state, searchParam: undefined, items });
   };
-  setPlayer = (item)=>{
-    this.setState({...this.state, watching:item})
-  }
+  setPlayer = (item) => {
+    this.setState({ ...this.state, watching: item });
+  };
   render() {
     const watching = this.state.watching;
     const items = this.state.items;
@@ -45,7 +45,13 @@ class App extends Component {
     return (
       <>
         <Navbar search={this.reqSearch}></Navbar>
-        {items && <Content watching={watching} items={items} playerHandler={playerHandler}></Content>}
+        {items && (
+          <Content
+            watching={watching}
+            items={items}
+            playerHandler={playerHandler}
+          ></Content>
+        )}
       </>
     );
   }

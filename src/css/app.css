@@ -41,7 +41,7 @@
   width: 180px;
   height: 40px;
   font-size: 0;
-  background-image: url(./img/yt_logo_rgb_dark.png);
+  background-image: url(../img/yt_logo_rgb_dark.png);
   background-size: cover;
 }
 
@@ -71,7 +71,9 @@ button {
   display: flex;
 }
 .player-wrapper {
+  min-width: 560px;
   display: flex;
+  flex-direction: column;
 }
 .list {
   display: flex;
@@ -98,4 +100,20 @@ button {
 }
 .item .vid-info {
   padding: 0.5em;
+}
+@media (max-width: 994px) {
+  .item {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .player-wrapper {
+    min-width: 100%;
+  }
+  .list .item {
+    max-width: 100%;
+  }
 }
