@@ -67,9 +67,12 @@ button {
 }
 
 /* Content */
-/* .content {
-  background-color: var(--background-color);
-} */
+.content {
+  display: flex;
+}
+.player-wrapper {
+  display: flex;
+}
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -82,8 +85,9 @@ button {
   flex-direction: row;
   box-sizing: border-box;
   padding: 0.25em;
-  width: 30em;
-  height: 6em;
+  width: 100%;
+  max-width: 30em;
+  min-height: 6em;
   margin: 2.5px;
   box-shadow: 2.5px 2.5px 2.5px rgb(128, 128, 128, 0.5);
 }

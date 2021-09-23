@@ -4,10 +4,11 @@ import Item from "./item";
 class List extends Component {
   render() {
     const items = this.props.items;
+    const playerHandler = this.props.playerHandler;
     return (
       <div className="list">
         {items.map((item) => (
-          <Item item={item} />
+          <Item key={item.id} item={item} playerHandler={playerHandler} />
         ))}
       </div>
     );
