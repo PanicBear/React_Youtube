@@ -18,7 +18,6 @@ class Item extends Component {
         <img className="thumb" src={thumbnailUrl} alt="" />
         <div className="vid-info">
           <span className="name">{title}</span>
-          <br />
           <strong className="channel">{channelTitle}</strong>
         </div>
       </div>
