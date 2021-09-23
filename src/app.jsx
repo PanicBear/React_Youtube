@@ -11,20 +11,20 @@ class App extends Component {
     items: undefined,
   };
   baseURL = "https://youtube.googleapis.com/youtube/v3";
-  // reqSearch = async (searchParam) => {
-  //   this.setState({ ...this.setState, searchParam });
-  //   try {
-  //     const response = await fetch(
-  //       `${this.baseURL}/search?part=snippet&maxResults=25&q=${searchParam}&key=${this.key2}`,
-  //       { method: "get" }
-  //     );
-  //     const list = await response.json();
-  //     const item = list.item;
-  //     this.setState({ ...this.state, searchParam, item });
-  //   } catch (error) {
-  //     return console.log("error", error);
-  //   }
-  // };
+  reqSearch = async (searchParam) => {
+    this.setState({ ...this.setState, searchParam });
+    try {
+      const response = await fetch(
+        `${this.baseURL}/search?part=snippet&maxResults=25&q=${searchParam}&key=${this.key2}`,
+        { method: "get" }
+      );
+      const list = await response.json();
+      const item = list.item;
+      this.setState({ ...this.state, searchParam, item });
+    } catch (error) {
+      return console.log("error", error);
+    }
+  };
   reqMost = async () => {
     const response = await fetch(
       `${this.baseURL}/videos?part=snippet&chart=mostPopular&maxResults=25&key=${this.key2}`,

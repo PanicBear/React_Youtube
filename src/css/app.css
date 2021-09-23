@@ -70,14 +70,16 @@ button {
 
 /* Content */
 .content {
+  width: 100%;
   display: flex;
 }
 .player-wrapper {
-  max-width: 560px;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 .list {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
