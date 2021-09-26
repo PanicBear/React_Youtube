@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Player extends Component {
   render() {
     const watching = this.props.watching;
-    const videoId = watching.id;
+    const videoId = watching.id.videoId ? watching.id.videoId : watching.id;
     return (
       <iframe
         height="315"
